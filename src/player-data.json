@@ -1,0 +1,292 @@
+{
+  "players": [
+    {
+      "id": "row-1",
+      "blank_id": "",
+      "ordinal": 1,
+      "position": "QB",
+      "name":	"Josh Allen (BUF)",
+      "bye": 13,
+      "notes":	"Elite thrower, elite runner... can do it all"
+    },
+    {
+      "id": "row-2",
+      "blank_id": "",
+      "ordinal": 2,
+      "position": "QB",
+      "name":	"Patrick Mahomes (KC)",
+      "bye": 10,
+      "notes":	"He's Patrick Mahomes."
+    },
+    {
+      "id": "row-3",
+      "blank_id": "",
+      "ordinal": 3,
+      "position": "QB",
+      "name":	"Jalen Hurts (PHI)",
+      "bye": 10,
+      "notes":	"Safe rushing floor with elite passing upside"
+    },
+    {
+      "id": "row-4",
+      "blank_id": "",
+      "ordinal": 4,
+      "position": "QB",
+      "name":	"Lamar Jackson (BAL)",
+      "bye": 13,
+      "notes":	"If he stays healthy, he could be the overall QB1"
+    },
+    {
+      "id": "row-5",
+      "blank_id": "",
+      "ordinal": 5,
+      "position": "QB",
+      "name":	"Joe Burrow (CIN)",
+      "bye": 7,
+      "notes":	"Keep an eye on the calf, but Joey Burr can ball"
+    },
+    {
+      "id": "row-6",
+      "blank_id": "",
+      "ordinal": 6,
+      "position": "QB",
+      "name":	"Justin Herbert (LAC)",
+      "bye": 5,
+      "notes":	"New OC Kellen Moore should help him bounce back"
+    },
+    {
+      "id": "row-7",
+      "blank_id": "",
+      "ordinal": 7,
+      "position": "QB",
+      "name":	"Trevor Lawrence (JAX)",
+      "bye": 9,
+      "notes":	"Overall QB1 upside in ascending offense"
+    },
+    {
+      "id": "row-8",
+      "blank_id": "",
+      "ordinal": 8,
+      "position": "QB",
+      "name":	"Tua Tagovailoa (MIA)",
+      "bye": 10,
+      "notes":	"Solid starter with big spike weeks if he stays healthy"
+    },
+    {
+      "id": "row-9",
+      "blank_id": "",
+      "ordinal": 9,
+      "position": "QB",
+      "name":	"Justin Fields (CHI)",
+      "bye": 13,
+      "notes":	"Could be Jalen Hurts 2.0 if the passing improves"
+    },
+    {
+      "id": "row-10",
+      "blank_id": "",
+      "ordinal": 10,
+      "position": "QB",
+      "name":	"Deshaun Watson (CLE)",
+      "bye": 5,
+      "notes":	"Will he look like the Watson of old? If so, he's a value"
+    },
+    {
+      "id": "row-11",
+      "blank_id": "",
+      "ordinal": 11,
+      "position": "QB",
+      "name":	"Aaron Rodgers (NYJ)",
+      "bye": 7,
+      "notes":	"Does he have any MVP-level years left?"
+    },
+    {
+      "id": "row-12",
+      "blank_id": "",
+      "ordinal": 12,
+      "position": "QB",
+      "name":	"Kirk Cousins (MIN)",
+      "bye": 13,
+      "notes":	"Boring, but productive on high-volume pass O"
+    },
+    {
+      "id": "row-13",
+      "blank_id": "",
+      "ordinal": 13,
+      "position": "QB",
+      "name":	"Anthony Richardson (IND)",
+      "bye": 11,
+      "notes":	"Ridiculous athlete; unpolished passer; major upside"
+    },
+    {
+      "id": "row-14",
+      "blank_id": "",
+      "ordinal": 14,
+      "position": "QB",
+      "name":	"Dak Prescott (DAL)",
+      "bye": 7,
+      "notes":	"Has fallen off after injuries, but better weapons this year"
+    },
+    {
+      "id": "row-15",
+      "blank_id": "",
+      "ordinal": 15,
+      "position": "QB",
+      "name":	"Daniel Jones (NYG)",
+      "bye": 13,
+      "notes":	"Inconsistent, but rushing ability offers upside"
+    },
+    {
+      "id": "row-16",
+      "blank_id": "",
+      "ordinal": 16,
+      "position": "QB",
+      "name":	"Geno Smith (SEA)",
+      "bye": 5,
+      "notes":	"Was last year a fluke? Better weapons in '23."
+    },
+    {
+      "id": "row-17",
+      "blank_id": "",
+      "ordinal": 17,
+      "position": "QB",
+      "name":	"Jared Goff (DET)",
+      "bye": 9,
+      "notes":	"High floor starter on a high-powered offense"
+    },
+    {
+      "id": "row-18",
+      "blank_id": "",
+      "ordinal": 18,
+      "position": "QB",
+      "name":	"Jordan Love (GB)",
+      "bye": 6,
+      "notes":	"No clue what to expect, but has some upside"
+    },
+    {
+      "id": "row-19",
+      "blank_id": "",
+      "ordinal": 19,
+      "position": "QB",
+      "name":	"Russell Wilson (DEN)",
+      "bye": 9,
+      "notes":	"Maybe Sean Payton can help him bounce back?"
+    },
+    {
+      "id": "row-20",
+      "blank_id": "",
+      "ordinal": 20,
+      "position": "QB",
+      "name":	"Derek Carr (NO)",
+      "bye": 11,
+      "notes":	"Meh, but has a very easy schedule"
+    },
+    {
+      "id": "row-21",
+      "blank_id": "",
+      "ordinal": 21,
+      "position": "QB",
+      "name":	"Kenny Pickett (PIT)",
+      "bye": 6,
+      "notes":	"Needs to take a big leap to be relevant"
+    },
+    {
+      "id": "row-22",
+      "blank_id": "",
+      "ordinal": 22,
+      "position": "QB",
+      "name":	"Brock Purdy (SF)",
+      "bye": 9,
+      "notes":	"49ers QB1 averages 17+ PPG in 2022"
+    },
+    {
+      "id": "row-23",
+      "blank_id": "",
+      "ordinal": 23,
+      "position": "QB",
+      "name":	"Matthew Stafford (LAR)",
+      "bye": 10,
+      "notes":	"Not getting any younger"
+    },
+    {
+      "id": "row-24",
+      "blank_id": "",
+      "ordinal": 24,
+      "position": "QB",
+      "name":	"Sam Howell (WAS)",
+      "bye": 14,
+      "notes":	"Good athlete; good prospect; but unproven"
+    },
+    {
+      "id": "row-25",
+      "blank_id": "",
+      "ordinal": 25,
+      "position": "QB",
+      "name":	"Bryce Young (CAR)",
+      "bye": 7,
+      "notes":	"First overall pick, but not a promising situation"
+    },
+    {
+      "id": "row-26",
+      "blank_id": "",
+      "ordinal": 26,
+      "position": "QB",
+      "name":	"C.J. Stroud (HOU)",
+      "bye": 7,
+      "notes": "Can be a viable streaming option if he decides to run"
+    },
+    {
+      "id": "row-27",
+      "blank_id": "",
+      "ordinal": 27,
+      "position": "QB",
+      "name":	"Desmond Ridder (ATL)",
+      "bye": 11,
+      "notes":	"Athletic upside, but raw and stuck in a 1960s offense"
+    },
+    {
+      "id": "row-28",
+      "blank_id": "",
+      "ordinal": 28,
+      "position": "QB",
+      "name":	"Kyler Murray (ARI)",
+      "bye": 14,
+      "notes":	"Coming off a torn ACL; will miss beginning of the year"
+    },
+    {
+      "id": "row-29",
+      "blank_id": "",
+      "ordinal": 29,
+      "position": "QB",
+      "name":	"Ryan Tannehill (TEN)",
+      "bye": 7,
+      "notes":	"Getting older and wasn't that special to begin with"
+    },
+    {
+      "id": "row-30",
+      "blank_id": "",
+      "ordinal": 30,
+      "position": "QB",
+      "name":	"Jimmy Garoppolo (LV)",
+      "bye": 13,
+      "notes":	"His play isn't as pretty as his face"
+    },
+    {
+      "id": "row-31",
+      "blank_id": "",
+      "ordinal": 31,
+      "position": "QB",
+      "name":	"Mac Jones (NE)",
+      "bye": 11,
+      "notes":	"Got outplayed by Bailey Zappe"
+    },
+    {
+      "id": "row-32",
+      "blank_id": "",
+      "ordinal": 32,
+      "position": "QB",
+      "name":	"Baker Mayfield (TB)",
+      "bye": 5,
+      "notes":	"No thanks"
+    }
+  ]
+}

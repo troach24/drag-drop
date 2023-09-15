@@ -11,7 +11,7 @@ const DraggingRow = styled.td`
 const TableData = styled.td`
   background: white;
   &:first-of-type {
-    min-width: 20ch;
+    min-width: .5ch;
   }
 `;
 

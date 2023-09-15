@@ -13,8 +13,7 @@ export default function makeData(...lens) {
   const makeDataLevel = (depth = 0) => {
     const len = lens[depth];
     return range(len).map((d) => {
-      let player = players[d];
-      player.rank = `${players[d].position} ${players[d].ordinal}`;
+      players[d].rank = `${players[d].position} ${players[d].ordinal}`;
       return {
         ...players[d],
         subRows: lens[depth + 1] ? makeDataLevel(depth + 1) : undefined

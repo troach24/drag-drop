@@ -37,44 +37,35 @@ function App() {
   const columns = React.useMemo(
     () => [
       {
-        Header: "Name",
+        Header: "QUARTERBACKS",
         columns: [
           {
-            Header: "First Name",
-            accessor: "firstName"
+            Header: "",
+            accessor: "blank_id"
           },
           {
-            Header: "Last Name",
-            accessor: "lastName"
-          }
+            Header: "RANK",
+            accessor: "rank"
+          },
+          {
+            Header: "BYE",
+            accessor: "bye"
+          },
+          {
+            Header: "NAME",
+            accessor: "name"
+          },
+          {
+            Header: "NOTES",
+            accessor: "notes"
+          },
         ]
       },
-      {
-        Header: "Info",
-        columns: [
-          {
-            Header: "Age",
-            accessor: "age"
-          },
-          {
-            Header: "Visits",
-            accessor: "visits"
-          },
-          {
-            Header: "Status",
-            accessor: "status"
-          },
-          {
-            Header: "Profile Progress",
-            accessor: "progress"
-          }
-        ]
-      }
     ],
     []
   );
 
-  const [data, setData] = React.useState(makeData(20));
+  const [data, setData] = React.useState(makeData(32));
   return (
     <Styles>
       <Table columns={columns} data={data} setData={setData} />
