@@ -3,6 +3,7 @@
     {
       "id": "row-1",
       "blank_id": "",
+      "rank": "",
       "ordinal": 1,
       "position": "QB",
       "name":	"Josh Allen (BUF)",
@@ -12,6 +13,7 @@
     {
       "id": "row-2",
       "blank_id": "",
+      "rank": "",
       "ordinal": 2,
       "position": "QB",
       "name":	"Patrick Mahomes (KC)",
@@ -21,6 +23,7 @@
     {
       "id": "row-3",
       "blank_id": "",
+      "rank": "",
       "ordinal": 3,
       "position": "QB",
       "name":	"Jalen Hurts (PHI)",
@@ -30,6 +33,7 @@
     {
       "id": "row-4",
       "blank_id": "",
+      "rank": "",
       "ordinal": 4,
       "position": "QB",
       "name":	"Lamar Jackson (BAL)",
@@ -39,6 +43,7 @@
     {
       "id": "row-5",
       "blank_id": "",
+      "rank": "",
       "ordinal": 5,
       "position": "QB",
       "name":	"Joe Burrow (CIN)",
@@ -48,6 +53,7 @@
     {
       "id": "row-6",
       "blank_id": "",
+      "rank": "",
       "ordinal": 6,
       "position": "QB",
       "name":	"Justin Herbert (LAC)",
@@ -57,6 +63,7 @@
     {
       "id": "row-7",
       "blank_id": "",
+      "rank": "",
       "ordinal": 7,
       "position": "QB",
       "name":	"Trevor Lawrence (JAX)",
@@ -66,6 +73,7 @@
     {
       "id": "row-8",
       "blank_id": "",
+      "rank": "",
       "ordinal": 8,
       "position": "QB",
       "name":	"Tua Tagovailoa (MIA)",
@@ -75,6 +83,7 @@
     {
       "id": "row-9",
       "blank_id": "",
+      "rank": "",
       "ordinal": 9,
       "position": "QB",
       "name":	"Justin Fields (CHI)",
@@ -84,6 +93,7 @@
     {
       "id": "row-10",
       "blank_id": "",
+      "rank": "",
       "ordinal": 10,
       "position": "QB",
       "name":	"Deshaun Watson (CLE)",
@@ -93,6 +103,7 @@
     {
       "id": "row-11",
       "blank_id": "",
+      "rank": "",
       "ordinal": 11,
       "position": "QB",
       "name":	"Aaron Rodgers (NYJ)",
@@ -102,6 +113,7 @@
     {
       "id": "row-12",
       "blank_id": "",
+      "rank": "",
       "ordinal": 12,
       "position": "QB",
       "name":	"Kirk Cousins (MIN)",
@@ -111,6 +123,7 @@
     {
       "id": "row-13",
       "blank_id": "",
+      "rank": "",
       "ordinal": 13,
       "position": "QB",
       "name":	"Anthony Richardson (IND)",
@@ -120,6 +133,7 @@
     {
       "id": "row-14",
       "blank_id": "",
+      "rank": "",
       "ordinal": 14,
       "position": "QB",
       "name":	"Dak Prescott (DAL)",
@@ -129,6 +143,7 @@
     {
       "id": "row-15",
       "blank_id": "",
+      "rank": "",
       "ordinal": 15,
       "position": "QB",
       "name":	"Daniel Jones (NYG)",
@@ -138,6 +153,7 @@
     {
       "id": "row-16",
       "blank_id": "",
+      "rank": "",
       "ordinal": 16,
       "position": "QB",
       "name":	"Geno Smith (SEA)",
@@ -147,6 +163,7 @@
     {
       "id": "row-17",
       "blank_id": "",
+      "rank": "",
       "ordinal": 17,
       "position": "QB",
       "name":	"Jared Goff (DET)",
@@ -156,6 +173,7 @@
     {
       "id": "row-18",
       "blank_id": "",
+      "rank": "",
       "ordinal": 18,
       "position": "QB",
       "name":	"Jordan Love (GB)",
@@ -165,6 +183,7 @@
     {
       "id": "row-19",
       "blank_id": "",
+      "rank": "",
       "ordinal": 19,
       "position": "QB",
       "name":	"Russell Wilson (DEN)",
@@ -174,6 +193,7 @@
     {
       "id": "row-20",
       "blank_id": "",
+      "rank": "",
       "ordinal": 20,
       "position": "QB",
       "name":	"Derek Carr (NO)",
@@ -183,6 +203,7 @@
     {
       "id": "row-21",
       "blank_id": "",
+      "rank": "",
       "ordinal": 21,
       "position": "QB",
       "name":	"Kenny Pickett (PIT)",
@@ -192,6 +213,7 @@
     {
       "id": "row-22",
       "blank_id": "",
+      "rank": "",
       "ordinal": 22,
       "position": "QB",
       "name":	"Brock Purdy (SF)",
@@ -201,6 +223,7 @@
     {
       "id": "row-23",
       "blank_id": "",
+      "rank": "",
       "ordinal": 23,
       "position": "QB",
       "name":	"Matthew Stafford (LAR)",
@@ -210,6 +233,7 @@
     {
       "id": "row-24",
       "blank_id": "",
+      "rank": "",
       "ordinal": 24,
       "position": "QB",
       "name":	"Sam Howell (WAS)",
@@ -219,6 +243,7 @@
     {
       "id": "row-25",
       "blank_id": "",
+      "rank": "",
       "ordinal": 25,
       "position": "QB",
       "name":	"Bryce Young (CAR)",
@@ -228,6 +253,7 @@
     {
       "id": "row-26",
       "blank_id": "",
+      "rank": "",
       "ordinal": 26,
       "position": "QB",
       "name":	"C.J. Stroud (HOU)",
@@ -237,6 +263,7 @@
     {
       "id": "row-27",
       "blank_id": "",
+      "rank": "",
       "ordinal": 27,
       "position": "QB",
       "name":	"Desmond Ridder (ATL)",
@@ -246,6 +273,7 @@
     {
       "id": "row-28",
       "blank_id": "",
+      "rank": "",
       "ordinal": 28,
       "position": "QB",
       "name":	"Kyler Murray (ARI)",
@@ -255,6 +283,7 @@
     {
       "id": "row-29",
       "blank_id": "",
+      "rank": "",
       "ordinal": 29,
       "position": "QB",
       "name":	"Ryan Tannehill (TEN)",
@@ -264,6 +293,7 @@
     {
       "id": "row-30",
       "blank_id": "",
+      "rank": "",
       "ordinal": 30,
       "position": "QB",
       "name":	"Jimmy Garoppolo (LV)",
@@ -273,6 +303,7 @@
     {
       "id": "row-31",
       "blank_id": "",
+      "rank": "",
       "ordinal": 31,
       "position": "QB",
       "name":	"Mac Jones (NE)",
@@ -282,6 +313,7 @@
     {
       "id": "row-32",
       "blank_id": "",
+      "rank": "",
       "ordinal": 32,
       "position": "QB",
       "name":	"Baker Mayfield (TB)",

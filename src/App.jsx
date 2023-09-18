@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-
+import logo from './mh-logo.jpg';
 import makeData from "./makeData";
 import { Table } from "./Table";
+import { useFlexLayout } from "react-table";
 
 const Styles = styled.div`
   padding: 1rem;
@@ -37,7 +38,7 @@ function App() {
   const columns = React.useMemo(
     () => [
       {
-        Header: "QUARTERBACKS",
+        Header: "MH TOP 169",
         columns: [
           {
             Header: "",
@@ -68,6 +69,11 @@ function App() {
   const [data, setData] = React.useState(makeData(32));
   return (
     <Styles>
+      <div className="header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </div>
+      <br />
+      <br />
       <Table columns={columns} data={data} setData={setData} />
     </Styles>
   );
