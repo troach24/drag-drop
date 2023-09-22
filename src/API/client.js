@@ -28,7 +28,7 @@ export async function updatePlayerData(data) {
   let request = await fetch(`${BASE_URL}/update_players`, {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${API_TOKEN}`
+      Authorization: `Bearer ${process.env.API_TOKEN}`
     },
     body: JSON.stringify(data)
   })
