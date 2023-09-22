@@ -1,5 +1,6 @@
-import { API_TOKEN } from "../credentials";
 const BASE_URL = "https://mh-rankings.poweredbyjourney.com";
+// import { API_TOKEN } from "../credentials";
+
 
 export async function getPlayerData() {
   try {
@@ -8,7 +9,7 @@ export async function getPlayerData() {
       headers: {
         "Content-Type": 'Application/json',
         "Access-Control-Allow-Origin": "*",
-        Authorization: `Bearer ${process.env.API_TOKEN || API_TOKEN}`,
+        Authorization: `Bearer ${process.env.API_TOKEN}`,
       },
     })
     if (request.status !== 200) {

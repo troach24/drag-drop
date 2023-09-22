@@ -11,6 +11,7 @@
     "@dnd-kit/modifiers": "4.0.0",
     "@dnd-kit/sortable": "5.1.0",
     "@dnd-kit/utilities": "3.0.1",
+    "dotenv": "^16.3.1",
     "namor": "^1.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
