@@ -1,5 +1,6 @@
 const BASE_URL = "https://mh-rankings.poweredbyjourney.com";
 
+
 export async function getPlayerData() {
   try {
     let request = await fetch(`${BASE_URL}/get_players`, {
