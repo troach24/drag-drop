@@ -8,7 +8,7 @@ export async function getPlayerData() {
       headers: {
         "Content-Type": 'Application/json',
         "Access-Control-Allow-Origin": "*",
-        Authorization: `Bearer ${API_TOKEN}`,
+        Authorization: `Bearer ${process.env.API_TOKEN || API_TOKEN}`,
       },
     })
     if (request.status !== 200) {
