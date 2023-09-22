@@ -8,7 +8,7 @@ export async function getPlayerData() {
       headers: {
         "Content-Type": 'Application/json',
         "Access-Control-Allow-Origin": "*",
-        Authorization: `Bearer ${process.env.API_TOKEN}`,
+        "Authorization": `Bearer ${process.env.REACT_APP_API_TOKEN}`,
       },
     })
     if (request.status !== 200) {
@@ -28,7 +28,9 @@ export async function updatePlayerData(data) {
   let request = await fetch(`${BASE_URL}/update_players`, {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.API_TOKEN}`
+      "Content-Type": 'Application/json',
+      "Access-Control-Allow-Origin": "*",
+      "Authorization": `Bearer ${process.env.REACT_APP_API_TOKEN}`,
     },
     body: JSON.stringify(data)
   })
