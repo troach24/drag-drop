@@ -19,7 +19,7 @@ import { useTable } from "react-table";
 import { DraggableTableRow } from "./DraggableTableRow";
 import { StaticTableRow } from "./StaticTableRow";
 
-export function Table({ columns, data, setData }) {
+export function Table({ columns, data, setData, updatePlayers }) {
   const [activeId, setActiveId] = useState();
   const items = useMemo(() => data?.map(({ id }) => id), [data]);
   // Use the state and functions returned from useTable to build your UI
@@ -52,8 +52,8 @@ export function Table({ columns, data, setData }) {
         return arrayMove(data, oldIndex, newIndex);
       });
     }
-
     setActiveId(null);
+    updatePlayers();
   }
 
   function handleDragCancel() {

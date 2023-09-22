@@ -2,7 +2,7 @@
   "players": [
     {
       "id": "row-1",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 1,
       "position": "QB",
@@ -12,7 +12,7 @@
     },
     {
       "id": "row-2",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 2,
       "position": "QB",
@@ -22,7 +22,7 @@
     },
     {
       "id": "row-3",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 3,
       "position": "QB",
@@ -32,7 +32,7 @@
     },
     {
       "id": "row-4",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 4,
       "position": "QB",
@@ -42,7 +42,7 @@
     },
     {
       "id": "row-5",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 5,
       "position": "QB",
@@ -52,7 +52,7 @@
     },
     {
       "id": "row-6",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 6,
       "position": "QB",
@@ -62,7 +62,7 @@
     },
     {
       "id": "row-7",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 7,
       "position": "QB",
@@ -72,7 +72,7 @@
     },
     {
       "id": "row-8",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 8,
       "position": "QB",
@@ -82,7 +82,7 @@
     },
     {
       "id": "row-9",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 9,
       "position": "QB",
@@ -92,7 +92,7 @@
     },
     {
       "id": "row-10",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 10,
       "position": "QB",
@@ -102,7 +102,7 @@
     },
     {
       "id": "row-11",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 11,
       "position": "QB",
@@ -112,7 +112,7 @@
     },
     {
       "id": "row-12",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 12,
       "position": "QB",
@@ -122,7 +122,7 @@
     },
     {
       "id": "row-13",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 13,
       "position": "QB",
@@ -132,7 +132,7 @@
     },
     {
       "id": "row-14",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 14,
       "position": "QB",
@@ -142,7 +142,7 @@
     },
     {
       "id": "row-15",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 15,
       "position": "QB",
@@ -152,7 +152,7 @@
     },
     {
       "id": "row-16",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 16,
       "position": "QB",
@@ -162,7 +162,7 @@
     },
     {
       "id": "row-17",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 17,
       "position": "QB",
@@ -172,7 +172,7 @@
     },
     {
       "id": "row-18",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 18,
       "position": "QB",
@@ -182,7 +182,7 @@
     },
     {
       "id": "row-19",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 19,
       "position": "QB",
@@ -192,7 +192,7 @@
     },
     {
       "id": "row-20",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 20,
       "position": "QB",
@@ -202,7 +202,7 @@
     },
     {
       "id": "row-21",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 21,
       "position": "QB",
@@ -212,7 +212,7 @@
     },
     {
       "id": "row-22",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 22,
       "position": "QB",
@@ -222,7 +222,7 @@
     },
     {
       "id": "row-23",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 23,
       "position": "QB",
@@ -232,7 +232,7 @@
     },
     {
       "id": "row-24",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 24,
       "position": "QB",
@@ -242,7 +242,7 @@
     },
     {
       "id": "row-25",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 25,
       "position": "QB",
@@ -252,7 +252,7 @@
     },
     {
       "id": "row-26",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 26,
       "position": "QB",
@@ -262,7 +262,7 @@
     },
     {
       "id": "row-27",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 27,
       "position": "QB",
@@ -272,7 +272,7 @@
     },
     {
       "id": "row-28",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 28,
       "position": "QB",
@@ -282,7 +282,7 @@
     },
     {
       "id": "row-29",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 29,
       "position": "QB",
@@ -292,7 +292,7 @@
     },
     {
       "id": "row-30",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 30,
       "position": "QB",
@@ -302,7 +302,7 @@
     },
     {
       "id": "row-31",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 31,
       "position": "QB",
@@ -312,7 +312,7 @@
     },
     {
       "id": "row-32",
-      "blank_id": "",
+      "row_idn": "",
       "rank": "",
       "ordinal": 32,
       "position": "QB",

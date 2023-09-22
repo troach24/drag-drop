@@ -3,11 +3,12 @@ import styled from "styled-components";
 import logo from './mh-logo.jpg';
 import makeData from "./makeData";
 import { Table } from "./Table";
-import { useFlexLayout } from "react-table";
+// import { useFlexLayout } from "react-table";
+import { updatePlayerData } from "./API/client";
 
 const Styles = styled.div`
   padding: 1rem;
-
+  
   table {
     border-spacing: 0;
     border: 1px solid black;
@@ -42,11 +43,11 @@ function App() {
         columns: [
           {
             Header: "",
-            accessor: "blank_id"
+            accessor: "row_idn"
           },
           {
             Header: "RANK",
-            accessor: "rank"
+            accessor: "overall_rank"
           },
           {
             Header: "BYE",
@@ -66,15 +67,50 @@ function App() {
     []
   );
 
-  const [data, setData] = React.useState(makeData(32));
+  const [isLoading, setLoading] = React.useState(true);
+  const [data, setData] = React.useState([]);
+  const getPlayers = async () => {
+    try {
+      const playerData = await makeData(20);
+      console.log('playerData:', playerData);
+      return setData(playerData);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const updatePlayers = async () => {
+    try {
+      const playerDataRequest = await updatePlayerData(data);
+      console.log('playerDataRequest:', playerDataRequest);
+      return;
+    } catch (error) {
+      console.error(error);
+    } finally {
+      // done
+    }
+  };
+  React.useEffect(() => {
+    getPlayers();
+  }, []);
+
   return (
     <Styles>
       <div className="header">
         <img src={logo} className="App-logo" alt="logo" />
       </div>
       <br />
-      <br />
-      <Table columns={columns} data={data} setData={setData} />
+      {isLoading ? (
+        <h1>Loading Player Data...</h1>
+      ) : (
+        <Table
+          columns={columns}
+          data={data}
+          setData={setData}
+          updatePlayers={updatePlayers}
+        />
+      )}
     </Styles>
   );
 }

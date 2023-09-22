@@ -1,4 +1,5 @@
 import * as PlayerData from './player-data.json';
+import { getPlayerData } from "./API/client";
 
 const range = (len) => {
   const arr = [];
@@ -8,13 +9,12 @@ const range = (len) => {
   return arr;
 };
 
-export default function makeData(...lens) {
-  const players = PlayerData.players;
+export default async function makeData(...lens) {
+  // const players = PlayerData.players;
+  const players = await getPlayerData();
   const makeDataLevel = (depth = 0) => {
     const len = lens[depth];
     return range(len).map((d) => {
-      let player = players[d];
-      player.rank = `${players[d].position} ${players[d].ordinal}`;
       return {
         ...players[d],
         subRows: lens[depth + 1] ? makeDataLevel(depth + 1) : undefined
