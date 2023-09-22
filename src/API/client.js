@@ -1,6 +1,4 @@
 const BASE_URL = "https://mh-rankings.poweredbyjourney.com";
-// import { API_TOKEN } from "../credentials";
-
 
 export async function getPlayerData() {
   try {
