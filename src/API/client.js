@@ -1,6 +1,5 @@
 const BASE_URL = "https://mh-rankings.poweredbyjourney.com";
 
-
 export async function getPlayerData() {
   try {
     let request = await fetch(`${BASE_URL}/get_players`, {
@@ -23,8 +22,6 @@ export async function getPlayerData() {
 }
 
 export async function updatePlayerData(data) {
-  console.log('UPDATE PLAYER DATA ATTEMPT');
-  console.log('data to send:', data);
   let request = await fetch(`${BASE_URL}/update_players`, {
     method: 'POST',
     headers: {

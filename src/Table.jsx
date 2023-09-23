@@ -49,11 +49,32 @@ export function Table({ columns, data, setData, updatePlayers }) {
       setData((data) => {
         const oldIndex = items.indexOf(active.id);
         const newIndex = items.indexOf(over.id);
-        return arrayMove(data, oldIndex, newIndex);
+        let updatedPlayers = arrayMove(data, oldIndex, newIndex);
+        updatedPlayers = rankPlayers(updatedPlayers);
+        updatePlayers(updatedPlayers);
+        return updatedPlayers;
       });
     }
     setActiveId(null);
-    updatePlayers();
+  }
+
+  function rankPlayers(players) {
+    let positionalRanks = {
+      QB: 0,
+      RB: 0,
+      WR: 0,
+      TE: 0
+    }
+    return players.reduce((acc, player, index) => {
+      positionalRanks[player.position]++;
+      acc.push({
+        ...player,
+        overall_rank: index + 1,
+        ordinal: index + 1,
+        positional_rank: `${player.position}${positionalRanks[player.position]}`
+      })
+      return acc;
+    }, [])
   }
 
   function handleDragCancel() {

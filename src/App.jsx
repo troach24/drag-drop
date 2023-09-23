@@ -3,7 +3,6 @@ import styled from "styled-components";
 import logo from './mh-logo.jpg';
 import makeData from "./makeData";
 import { Table } from "./Table";
-// import { useFlexLayout } from "react-table";
 import { updatePlayerData } from "./API/client";
 
 const Styles = styled.div`
@@ -50,6 +49,10 @@ function App() {
             accessor: "overall_rank"
           },
           {
+            Header: "POS",
+            accessor: "positional_rank"
+          },
+          {
             Header: "BYE",
             accessor: "bye"
           },
@@ -68,31 +71,40 @@ function App() {
   );
 
   const [isLoading, setLoading] = React.useState(true);
-  const [data, setData] = React.useState([]);
-  const getPlayers = async () => {
+  const [data, setData] = React.useState(null);
+
+  const updatePlayers = async (newData) => {
+    setData(newData);
     try {
-      const playerData = await makeData(20);
-      console.log('playerData:', playerData);
-      return setData(playerData);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  };
-  const updatePlayers = async () => {
-    try {
-      const playerDataRequest = await updatePlayerData(data);
+      const playerDataRequest = await updatePlayerData(newData);
       console.log('playerDataRequest:', playerDataRequest);
       return;
     } catch (error) {
       console.error(error);
     } finally {
       // done
+      console.log('players updated');
     }
   };
+
   React.useEffect(() => {
-    getPlayers();
+    let isSubscribed = true;
+    const getPlayers = async () => {
+      try {
+        const playerData = await makeData(20);
+        console.log('playerData:', playerData);
+        if (isSubscribed) {
+          setData(playerData);
+        }
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getPlayers()
+        .catch(console.error);;
+    return () => isSubscribed = false;
   }, []);
 
   return (
