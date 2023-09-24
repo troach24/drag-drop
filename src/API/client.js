@@ -1,4 +1,6 @@
-const BASE_URL = "https://mh-rankings.poweredbyjourney.com";
+const ENV = process.env.NODE_ENV === 'development' ? 'development' : 'production';
+const BASE_URL = ENV === 'development' ? process.env.REACT_APP_DEV_ENDPOINT
+  : process.env.REACT_APP_PROD_ENDPOINT;
 
 export async function getPlayerData() {
   try {
@@ -7,7 +9,8 @@ export async function getPlayerData() {
       headers: {
         "Content-Type": 'Application/json',
         "Access-Control-Allow-Origin": "*",
-        "Authorization": `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+        "Authorization": `Bearer ${ENV === 'development' ? process.env.REACT_APP_API_DEV_TOKEN
+          : process.env.REACT_APP_API_TOKEN}`,
       },
     })
     if (request.status !== 200) {
@@ -27,7 +30,8 @@ export async function updatePlayerData(data) {
     headers: {
       "Content-Type": 'Application/json',
       "Access-Control-Allow-Origin": "*",
-      "Authorization": `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+      "Authorization": `Bearer ${ENV === 'development' ? process.env.REACT_APP_API_DEV_TOKEN
+          : process.env.REACT_APP_API_TOKEN}`,
     },
     body: JSON.stringify(data)
   })

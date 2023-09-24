@@ -45,8 +45,16 @@ function App() {
             accessor: "row_idn"
           },
           {
-            Header: "RANK",
+            Header: "",
             accessor: "overall_rank"
+          },
+          {
+            Header: "NAME",
+            accessor: "name"
+          },
+          {
+            Header: "NOTE",
+            accessor: "notes"
           },
           {
             Header: "POS",
@@ -55,14 +63,6 @@ function App() {
           {
             Header: "BYE",
             accessor: "bye"
-          },
-          {
-            Header: "NAME",
-            accessor: "name"
-          },
-          {
-            Header: "NOTES",
-            accessor: "notes"
           },
         ]
       },
@@ -76,14 +76,12 @@ function App() {
   const updatePlayers = async (newData) => {
     setData(newData);
     try {
-      const playerDataRequest = await updatePlayerData(newData);
-      console.log('playerDataRequest:', playerDataRequest);
-      return;
+      await updatePlayerData(newData);
     } catch (error) {
       console.error(error);
     } finally {
       // done
-      console.log('players updated');
+      console.log('update players - success');
     }
   };
 
@@ -92,7 +90,7 @@ function App() {
     const getPlayers = async () => {
       try {
         const playerData = await makeData(20);
-        console.log('playerData:', playerData);
+        console.log('get players - success');
         if (isSubscribed) {
           setData(playerData);
         }
