@@ -5,7 +5,7 @@ import { DragHandle } from "./DragHandle";
 import styled from "styled-components";
 
 const DraggingRow = styled.td`
-  background: rgba(127, 207, 250, 0.3);
+  background: rgb(0, 99, 66);
 `;
 
 const TableData = styled.td`

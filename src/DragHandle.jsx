@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const HandleWrapper = styled.div`
-  height: 1rem;
+  height: 1.25rem;
   vertical-align: bottom;
   display: inline-block;
   margin-right: 0.5rem;

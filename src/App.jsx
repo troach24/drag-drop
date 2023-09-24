@@ -7,8 +7,12 @@ import { updatePlayerData } from "./API/client";
 
 const Styles = styled.div`
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
   table {
+    width: 80%;
     border-spacing: 0;
     border: 1px solid black;
 
