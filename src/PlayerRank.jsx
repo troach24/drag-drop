@@ -45,10 +45,6 @@ function PlayerRank() {
         columns: [
           {
             Header: "",
-            accessor: "row_idn"
-          },
-          {
-            Header: "",
             accessor: "overall_rank"
           },
           {

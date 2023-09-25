@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import makeData from "./makeData";
-import { Table } from "./Table";
+import { EditTable } from "./EditTable";
 import { updatePlayerData } from "./API/client";
 
 const Styles = styled.div`
@@ -113,7 +113,7 @@ function EditPlayerRank() {
       {isLoading ? (
         <h1>Loading Player Data...</h1>
       ) : (
-        <Table
+        <EditTable
           columns={columns}
           data={data}
           setData={setData}

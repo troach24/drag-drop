@@ -1,26 +1,15 @@
 import React, { useMemo, useState } from "react";
 import {
-  closestCenter,
-  DndContext,
-  DragOverlay,
-  KeyboardSensor,
-  MouseSensor,
-  TouchSensor,
-  useSensor,
-  useSensors
+  DndContext
 } from "@dnd-kit/core";
-import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 import {
-  arrayMove,
   SortableContext,
   verticalListSortingStrategy
 } from "@dnd-kit/sortable";
 import { useTable } from "react-table";
-import { DraggableTableRow } from "./DraggableTableRow";
-import { StaticTableRow } from "./StaticTableRow";
+import { NonDraggableTableRow } from "./NonDraggableTableRow";
 
-export function Table({ columns, data, setData, updatePlayers }) {
-  const [activeId, setActiveId] = useState();
+export function Table({ columns, data }) {
   const items = useMemo(() => data?.map(({ id }) => id), [data]);
   // Use the state and functions returned from useTable to build your UI
   const {
@@ -33,73 +22,10 @@ export function Table({ columns, data, setData, updatePlayers }) {
     columns,
     data
   });
-  const sensors = useSensors(
-    useSensor(MouseSensor, {}),
-    useSensor(TouchSensor, {}),
-    useSensor(KeyboardSensor, {})
-  );
-
-  function handleDragStart(event) {
-    setActiveId(event.active.id);
-  }
-
-  function handleDragEnd(event) {
-    const { active, over } = event;
-    if (active.id !== over.id) {
-      setData((data) => {
-        const oldIndex = items.indexOf(active.id);
-        const newIndex = items.indexOf(over.id);
-        let updatedPlayers = arrayMove(data, oldIndex, newIndex);
-        updatedPlayers = rankPlayers(updatedPlayers);
-        updatePlayers(updatedPlayers);
-        return updatedPlayers;
-      });
-    }
-    setActiveId(null);
-  }
-
-  function rankPlayers(players) {
-    let positionalRanks = {
-      QB: 0,
-      RB: 0,
-      WR: 0,
-      TE: 0
-    }
-    return players.reduce((acc, player, index) => {
-      positionalRanks[player.position]++;
-      acc.push({
-        ...player,
-        overall_rank: index + 1,
-        ordinal: index + 1,
-        positional_rank: `${player.position}${positionalRanks[player.position]}`
-      })
-      return acc;
-    }, [])
-  }
-
-  function handleDragCancel() {
-    setActiveId(null);
-  }
-
-  const selectedRow = useMemo(() => {
-    if (!activeId) {
-      return null;
-    }
-    const row = rows.find(({ original }) => original.id === activeId);
-    prepareRow(row);
-    return row;
-  }, [activeId, rows, prepareRow]);
 
   // Render the UI for your table
   return (
-    <DndContext
-      sensors={sensors}
-      onDragEnd={handleDragEnd}
-      onDragStart={handleDragStart}
-      onDragCancel={handleDragCancel}
-      collisionDetection={closestCenter}
-      modifiers={[restrictToVerticalAxis]}
-    >
+    <DndContext>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
@@ -114,20 +40,11 @@ export function Table({ columns, data, setData, updatePlayers }) {
           <SortableContext items={items} strategy={verticalListSortingStrategy}>
             {rows.map((row, i) => {
               prepareRow(row);
-              return <DraggableTableRow key={row.original.id} row={row} />;
+              return <NonDraggableTableRow key={row.original.id} row={row} />;
             })}
           </SortableContext>
         </tbody>
       </table>
-      <DragOverlay>
-        {activeId && (
-          <table style={{ width: "100%" }}>
-            <tbody>
-              <StaticTableRow row={selectedRow} />
-            </tbody>
-          </table>
-        )}
-      </DragOverlay>
     </DndContext>
   );
 }
