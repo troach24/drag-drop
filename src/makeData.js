@@ -1,4 +1,4 @@
-import * as PlayerData from './player-data.json';
+import * as PlayerData from './player-data.json'; // use for local dev
 import { getPlayerData } from "./API/client";
 
 const range = (len) => {
@@ -10,7 +10,7 @@ const range = (len) => {
 };
 
 export default async function makeData(...lens) {
-  // const players = PlayerData.players;
+  // const players = PlayerData.players; // use for local dev
   const players = await getPlayerData();
   const makeDataLevel = (depth = 0) => {
     const len = lens[depth];

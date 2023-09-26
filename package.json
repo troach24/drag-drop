@@ -13,8 +13,10 @@
     "@dnd-kit/utilities": "3.0.1",
     "dotenv": "^16.3.1",
     "namor": "^1.1.2",
+    "primereact": "^9.6.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^6.16.0",
     "react-scripts": "3.0.1",
     "react-table": "latest",
     "styled-components": "^4.3.2"
@@ -39,7 +41,7 @@
     ]
   },
   "keywords": [],
-  "name": "react-table-drag-and-drop-sort-rows-with-dnd-kit",
+  "name": "mh-player-rankings",
   "description": "",
   "version": "1.1"
 }

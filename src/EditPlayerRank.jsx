@@ -3,6 +3,31 @@ import styled from "styled-components";
 import makeData from "./makeData";
 import { EditTable } from "./EditTable";
 import { updatePlayerData } from "./API/client";
+import { Password } from 'primereact/password';
+
+const PasswordContainerStyle = styled.div`
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
+  `
+  
+  const PasswordInputStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+`
+
+const Button = styled.button`
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+`
 
 const Styles = styled.div`
   padding: 1rem;
@@ -73,9 +98,12 @@ function EditPlayerRank() {
     []
   );
 
+  const [value, setValue] = React.useState('');
+  const [isAuthenticated, setAuthenticated] = React.useState(false);
   const [isLoading, setLoading] = React.useState(true);
   const [data, setData] = React.useState(null);
 
+  
   const updatePlayers = async (newData) => {
     setData(newData);
     try {
@@ -108,19 +136,38 @@ function EditPlayerRank() {
     return () => isSubscribed = false;
   }, []);
 
+  function setFieldValue() {
+    const match = value === process.env.REACT_APP_PASSWORD;
+    if (match) {
+      setAuthenticated(true);
+    }
+  }
+
   return (
-    <Styles>
-      {isLoading ? (
-        <h1>Loading Player Data...</h1>
+    <div>
+      {isAuthenticated ? (
+        <Styles>
+          {isLoading ? (
+            <h1>Loading Player Data...</h1>
+          ) : (
+            <EditTable
+              columns={columns}
+              data={data}
+              setData={setData}
+              updatePlayers={updatePlayers}
+            />
+          )}
+        </Styles>
       ) : (
-        <EditTable
-          columns={columns}
-          data={data}
-          setData={setData}
-          updatePlayers={updatePlayers}
-        />
+        <PasswordContainerStyle>
+          <PasswordInputStyle>
+            <h3>Enter Password</h3>
+            <Password value={value} onChange={(e) => setValue(e.target.value)} toggleMask />
+            <Button onClick={setFieldValue}>ENTER</Button>
+          </PasswordInputStyle>
+        </PasswordContainerStyle>
       )}
-    </Styles>
+    </div>
   );
 }
 
