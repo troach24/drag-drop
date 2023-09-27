@@ -5,36 +5,41 @@ import { Table } from "./Table";
 import { updatePlayerData } from "./API/client";
 
 const Styles = styled.div`
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+padding: 1rem .5rem 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+table {
+  width: 80vw;
+  border-spacing: 0;
+  border: 1px solid black;
   
-  table {
-    width: 80%;
-    border-spacing: 0;
-    border: 1px solid black;
-
-    tr {
-      :last-child {
-        td {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    th,
-    td {
-      margin: 0;
-      padding: 0.5rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-
-      :last-child {
-        border-right: 0;
+  tr {
+    :last-child {
+      td {
+        border-bottom: 0;
       }
     }
   }
+  
+  th,
+  td {
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    
+    :last-child {
+      border-right: 0;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  table {
+    width: 95%;
+  }
+}
 `;
 
 function PlayerRank() {
@@ -58,10 +63,6 @@ function PlayerRank() {
           {
             Header: "POS",
             accessor: "positional_rank"
-          },
-          {
-            Header: "BYE",
-            accessor: "bye"
           },
         ]
       },
