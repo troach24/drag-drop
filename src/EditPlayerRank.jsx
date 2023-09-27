@@ -30,13 +30,13 @@ const Button = styled.button`
 `
 
 const Styles = styled.div`
-  padding: 1rem;
+  padding: 1rem .5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   
   table {
-    width: 80%;
+    width: 75%;
     border-spacing: 0;
     border: 1px solid black;
 
@@ -60,6 +60,11 @@ const Styles = styled.div`
       }
     }
   }
+  @media screen and (max-width: 900px) {
+    table {
+      width: 100%;
+    }
+  }
 `;
 
 function EditPlayerRank() {
@@ -70,7 +75,7 @@ function EditPlayerRank() {
         columns: [
           {
             Header: "",
-            accessor: "row_idn"
+            accessor: "row_idn",
           },
           {
             Header: "",
@@ -87,10 +92,6 @@ function EditPlayerRank() {
           {
             Header: "POS",
             accessor: "positional_rank"
-          },
-          {
-            Header: "BYE",
-            accessor: "bye"
           },
         ]
       },

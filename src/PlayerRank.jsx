@@ -11,7 +11,7 @@ flex-direction: column;
 align-items: center;
 
 table {
-  width: 80vw;
+  width: 75vw;
   border-spacing: 0;
   border: 1px solid black;
   
@@ -37,7 +37,7 @@ table {
 }
 @media screen and (max-width: 900px) {
   table {
-    width: 95%;
+    width: 100%;
   }
 }
 `;

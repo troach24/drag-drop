@@ -13,6 +13,11 @@ const TableData = styled.td`
   &:first-of-type {
     min-width: .5ch;
   }
+  @media screen and (max-width: 900px) {
+    &:first-of-type {
+      min-width: 2ch;
+    }
+  }
 `;
 
 export const DraggableTableRow = ({ row }) => {
