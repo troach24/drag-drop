@@ -15,7 +15,7 @@ const TableData = styled.td`
   }
   @media screen and (max-width: 900px) {
     &:first-of-type {
-      min-width: 2ch;
+      min-width: .1ch;
     }
   }
 `;
