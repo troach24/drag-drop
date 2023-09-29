@@ -8,6 +8,9 @@ const TableData = styled.td`
   &:first-of-type {
     min-width: .5ch;
   }
+  &:nth-of-type(2) {
+    font-weight: bold;
+  }
 `;
 
 export const NonDraggableTableRow = ({ row }) => {

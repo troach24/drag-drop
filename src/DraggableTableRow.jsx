@@ -13,6 +13,9 @@ const TableData = styled.td`
   &:first-of-type {
     min-width: .5ch;
   }
+  &:nth-of-type(3) {
+    font-weight: bold;
+  }
   @media screen and (max-width: 900px) {
     &:first-of-type {
       min-width: .1ch;

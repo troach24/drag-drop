@@ -46,7 +46,7 @@ function PlayerRank() {
   const columns = React.useMemo(
     () => [
       {
-        Header: "MH TOP 169",
+        Header: "Rest of Season Top 169 (0.5 PPR)",
         columns: [
           {
             Header: "",
