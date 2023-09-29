@@ -89,7 +89,7 @@ function PlayerRank() {
     let isSubscribed = true;
     const getPlayers = async () => {
       try {
-        const playerData = await makeData(20);
+        const playerData = await makeData(169);
         console.log('get players - success');
         if (isSubscribed) {
           setData(playerData);
