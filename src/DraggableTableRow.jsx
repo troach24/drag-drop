@@ -8,22 +8,30 @@ const DraggingRow = styled.td`
   background: rgb(0, 99, 66);
 `;
 
-const TableData = styled.td`
-  background: white;
-  &:first-of-type {
-    min-width: .5ch;
-  }
-  &:nth-of-type(3) {
-    font-weight: bold;
-  }
-  @media screen and (max-width: 900px) {
-    &:first-of-type {
-      min-width: .1ch;
-    }
-  }
-`;
-
 export const DraggableTableRow = ({ row }) => {
+  const colorCodeLookup = {
+    "QB": "#FF7B7A",
+    "RB": "#005B96",
+    "WR": "#77AB59",
+    "TE": "#BE29EC",
+  }
+
+  const TableData = styled.td`
+    background: white;
+    &:first-of-type {
+      min-width: .5ch;
+    }
+    &:nth-of-type(3) {
+      font-weight: bold;
+      color: ${colorCodeLookup[row.original.position]}
+    }
+    @media screen and (max-width: 900px) {
+      &:first-of-type {
+        min-width: .1ch;
+      }
+    }
+  `;
+
   const {
     attributes,
     listeners,
