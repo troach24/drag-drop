@@ -6,20 +6,20 @@ import styled from "styled-components";
 
 export const NonDraggableTableRow = ({ row }) => {
   const colorCodeLookup = {
-    "QB": "#FF7B7A",
-    "RB": "#005B96",
-    "WR": "#77AB59",
-    "TE": "#BE29EC",
+    "QB": "#FFBABA",
+    "RB": "#B3CDE0",
+    "WR": "#A0E1A4",
+    "TE": "#EFBBFF",
   }
 
   const TableData = styled.td`
-    background: white;
+    background: ${colorCodeLookup[row.original.position]};
+    border-color: ${colorCodeLookup[row.original.position]};
     &:first-of-type {
       min-width: .5ch;
     }
     &:nth-of-type(2) {
       font-weight: bold;
-      color: ${colorCodeLookup[row.original.position]}
     }
   `;
 
