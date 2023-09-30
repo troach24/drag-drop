@@ -16,10 +16,13 @@ export const NonDraggableTableRow = ({ row }) => {
     background: ${colorCodeLookup[row.original.position]};
     border-color: ${colorCodeLookup[row.original.position]};
     &:first-of-type {
-      min-width: .5ch;
+      text-align: center;
     }
     &:nth-of-type(2) {
       font-weight: bold;
+    }
+    &:last-of-type {
+      text-align: center;
     }
   `;
 

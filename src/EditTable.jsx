@@ -67,12 +67,21 @@ export function EditTable({ columns, data, setData, updatePlayers }) {
     }
     return players.reduce((acc, player, index) => {
       positionalRanks[player.position]++;
-      acc.push({
-        ...player,
-        overall_rank: index + 1,
-        ordinal: index + 1,
-        positional_rank: `${player.position}${positionalRanks[player.position]}`
-      })
+      if (index === 168) {
+        acc.push({
+          ...player,
+          overall_rank: index + 1,
+          ordinal: index + 1,
+          positional_rank: `OG169`
+        })
+      } else {
+        acc.push({
+          ...player,
+          overall_rank: index + 1,
+          ordinal: index + 1,
+          positional_rank: `${player.position}${positionalRanks[player.position]}`
+        })
+      }
       return acc;
     }, [])
   }

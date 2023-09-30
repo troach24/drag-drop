@@ -10,27 +10,30 @@ const DraggingRow = styled.td`
 
 export const DraggableTableRow = ({ row }) => {
   const colorCodeLookup = {
-    "QB": "#FF7B7A",
-    "RB": "#005B96",
-    "WR": "#77AB59",
-    "TE": "#BE29EC",
+    "QB": "#FFBABA",
+    "RB": "#B3CDE0",
+    "WR": "#A0E1A4",
+    "TE": "#EFBBFF",
   }
 
   const TableData = styled.td`
-    background: white;
+    background: ${colorCodeLookup[row.original.position]};
+    border-color: ${colorCodeLookup[row.original.position]};
     &:first-of-type {
       min-width: .5ch;
+      text-align: center;
+    }
+    &:nth-of-type(2) {
+      text-align: center;
     }
     &:nth-of-type(3) {
       font-weight: bold;
-      color: ${colorCodeLookup[row.original.position]}
     }
-    @media screen and (max-width: 900px) {
-      &:first-of-type {
-        min-width: .1ch;
-      }
+    &:last-of-type {
+      min-width: .5ch;
+      text-align: center;
     }
-  `;
+    `;
 
   const {
     attributes,
