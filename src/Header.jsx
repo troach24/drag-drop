@@ -11,7 +11,13 @@ const HeaderStyle = styled.div`
 function Header () {
   return (
     <HeaderStyle>
-      <img src={logo} className="App-logo" alt="logo" />
+      <a rel="stylesheet" href="https://morninghuddle.beehiiv.com/">
+        <img
+          src={logo}
+          className="App-logo"
+          alt="logo"
+        />
+      </a>
     </HeaderStyle>
   )
 }
