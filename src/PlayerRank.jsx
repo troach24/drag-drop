@@ -15,6 +15,9 @@ table {
   border-spacing: 0;
   border: 1px solid black;
   
+  th {
+    border-bottom 1px solid black;
+  }
   tr {
     :last-child {
       td {
@@ -27,8 +30,6 @@ table {
   td {
     margin: 0;
     padding: 0.5rem;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
     
     :last-child {
       border-right: 0;
