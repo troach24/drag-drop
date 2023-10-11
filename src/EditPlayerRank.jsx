@@ -94,6 +94,10 @@ function EditPlayerRank() {
             Header: "POS",
             accessor: "positional_rank"
           },
+          {
+            Header: "",
+            accessor: "edit_icon"
+          },
         ]
       },
     ],

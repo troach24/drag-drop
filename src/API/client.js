@@ -36,7 +36,29 @@ export async function updatePlayerData(data) {
     body: JSON.stringify(data)
   })
   if (request.status !== 200) {
-    throw new Error(`Error retreiving player data`);
+    throw new Error(`Error updating player rankings`);
+  }
+  const response = await request.json();
+  return response;
+}
+
+export async function updatePlayerNote(_id, note) {
+  let request = await fetch(`${BASE_URL}/update_player_note`, {
+    method: 'PUT',
+    headers: {
+      "Content-Type": 'Application/json',
+      "Access-Control-Allow-Origin": "*",
+      "Authorization": `Bearer ${ENV === 'development' ? process.env.REACT_APP_API_DEV_TOKEN
+      : process.env.REACT_APP_API_TOKEN}`,
+    },
+    body: JSON.stringify({
+      _id: _id,
+      note: note
+    })
+  })
+  console.log(request);
+  if (request.status !== 200) {
+    throw new Error(`Error updating player note with ID: ${_id}`);
   }
   const response = await request.json();
   return response;
