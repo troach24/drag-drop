@@ -72,7 +72,7 @@ export function EditTable({ columns, data, setData, updatePlayers }) {
           ...player,
           overall_rank: index + 1,
           ordinal: index + 1,
-          positional_rank: `OG169`
+          positional_rank: `169`
         })
       } else {
         acc.push({
