@@ -98,6 +98,10 @@ function EditPlayerRank() {
             Header: "",
             accessor: "edit_icon"
           },
+          {
+            Header: "",
+            accessor: "delete_icon"
+          },
         ]
       },
     ],
@@ -105,7 +109,7 @@ function EditPlayerRank() {
   );
 
   const [value, setValue] = React.useState('');
-  const [isAuthenticated, setAuthenticated] = React.useState(false);
+  const [isAuthenticated, setAuthenticated] = React.useState(true);
   const [isLoading, setLoading] = React.useState(true);
   const [data, setData] = React.useState(null);
 

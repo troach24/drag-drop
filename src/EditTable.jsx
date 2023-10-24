@@ -18,6 +18,7 @@ import {
 import { useTable } from "react-table";
 import { DraggableTableRow } from "./DraggableTableRow";
 import { StaticTableRow } from "./StaticTableRow";
+import styled from "styled-components";
 
 export function EditTable({ columns, data, setData, updatePlayers }) {
   const [activeId, setActiveId] = useState();
@@ -33,6 +34,16 @@ export function EditTable({ columns, data, setData, updatePlayers }) {
     columns,
     data
   });
+
+  const HeaderStyle = styled.th`
+    &:nth-of-type(3) {
+      text-align: left;
+    }
+    &:nth-of-type(4) {
+      text-align: left;
+    }
+  `
+
   const sensors = useSensors(
     useSensor(MouseSensor, {}),
     useSensor(TouchSensor, {}),
@@ -114,7 +125,7 @@ export function EditTable({ columns, data, setData, updatePlayers }) {
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+                <HeaderStyle {...column.getHeaderProps()}>{column.render("Header")}</HeaderStyle>
               ))}
             </tr>
           ))}

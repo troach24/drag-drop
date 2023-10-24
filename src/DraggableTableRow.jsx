@@ -5,6 +5,7 @@ import { DragHandle } from "./DragHandle";
 import { EditCell } from "./EditCell";
 import styled from "styled-components";
 import { updatePlayerNote } from "./API/client";
+import { CrudRow } from "./CrudRow";
 
 const DraggingRow = styled.td`
   background: rgb(0, 99, 66);
@@ -30,6 +31,9 @@ export const DraggableTableRow = ({ row }) => {
     }
     &:nth-of-type(3) {
       font-weight: bold;
+    }
+    &:nth-of-type(5) {
+      text-align: center;
     }
     &:last-of-type {
       min-width: .5ch;
@@ -111,6 +115,19 @@ export const DraggableTableRow = ({ row }) => {
             return (
               <TableData {...cell.getCellProps()}>
                 <EditCell
+                  row={row}
+                  selectedId={selectedId}
+                  setEditRow={setEditRow}
+                  cancelEditRow={cancelEditRow}
+                  saveEditRow={saveEditRow}
+                />
+              </TableData>
+            );
+          }
+          if (i === 6) {
+            return (
+              <TableData {...cell.getCellProps()}>
+                <CrudRow
                   row={row}
                   selectedId={selectedId}
                   setEditRow={setEditRow}
