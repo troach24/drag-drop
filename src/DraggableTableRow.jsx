@@ -1,10 +1,9 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { DragHandle } from "./DragHandle";
-import { EditCell } from "./EditCell";
 import styled from "styled-components";
-import { updatePlayerNote } from "./API/client";
+import { updatePlayer } from "./API/client";
 import { CrudRow } from "./CrudRow";
 
 const DraggingRow = styled.td`
@@ -61,28 +60,9 @@ export const DraggableTableRow = ({ row }) => {
     transform: CSS.Transform.toString(transform),
     transition: transition
   };
-
-  const [selectedId, setSelectedId] = useState('');
-  const [notesVal, updateNotesVal] = useState(row.original.notes);
-  const notesRef = useRef(row.original.notes);
-
-  const setEditRow = (rowId) => {
-    setSelectedId(rowId);
-  }
-
-  function cancelEditRow() {
-    setSelectedId('');
-  }
   
-  function updateEditRow(val) {
-    notesRef.current = val;
-  }
-  
-  async function saveEditRow() {
-    updateNotesVal(notesRef.current);
-    await updatePlayerNote(row.original.id, notesRef.current);
-    row.original.notes = notesRef.current;
-    setSelectedId('');
+  async function saveEditRow(player_obj) {
+    await updatePlayer(player_obj);
   }
 
   return (
@@ -99,39 +79,11 @@ export const DraggableTableRow = ({ row }) => {
               </TableData>
             );
           }
-          if (i === 3) {
-            return (
-              row.original.id === selectedId ? 
-                <TableData {...cell.getCellProps()}>
-                  <InputStyle type="text" ref={notesRef} defaultValue={notesVal} onChange={(e) => updateEditRow(e.target.value)} />
-                </TableData>
-                :
-                <TableData {...cell.getCellProps()}>
-                  {cell.render("Cell")}
-                </TableData>
-            );
-          }
-          if (i === 5) {
-            return (
-              <TableData {...cell.getCellProps()}>
-                <EditCell
-                  row={row}
-                  selectedId={selectedId}
-                  setEditRow={setEditRow}
-                  cancelEditRow={cancelEditRow}
-                  saveEditRow={saveEditRow}
-                />
-              </TableData>
-            );
-          }
           if (i === 6) {
             return (
               <TableData {...cell.getCellProps()}>
                 <CrudRow
                   row={row}
-                  selectedId={selectedId}
-                  setEditRow={setEditRow}
-                  cancelEditRow={cancelEditRow}
                   saveEditRow={saveEditRow}
                 />
               </TableData>

@@ -12,7 +12,7 @@ const PasswordContainerStyle = styled.div`
   justify-content: space-around
   `
   
-  const PasswordInputStyle = styled.div`
+const PasswordInputStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

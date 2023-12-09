@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
@@ -13,31 +13,82 @@ const DialogWindowStyle = styled.div`
 const dialogStyleObj = {
   width: '70vw',
   backgroundColor: 'white',
-  padding: '15px'
+  padding: '15px',
+  border: 'solid 2px black',
 }
 
-export function CrudRow({row, selectedId, setEditRow, cancelEditRow, saveEditRow }) {
-    const [visible, setVisible] = useState(false);
+export function CrudRow({row, saveEditRow }) {
+  const [visible, setVisible] = useState(false);
+  const [playerName, setName] = useState(row.original.name);
+  const [playerTeam, setTeam] = useState(row.original.team);
+  const [playerPosition, setPosition] = useState(row.original.position);
+  const [playerNotes, setNotes] = useState(row.original.notes);
+  
+  const nameRef = useRef(row.original.name);
+  const teamRef = useRef(row.original.team);
+  const positionRef = useRef(row.original.position);
+  const notesRef = useRef(row.original.notes);
     
-    function setValue(val, field) {
-      row.original[field] = val;
+  function savePlayer() {
+    setName(nameRef.current);
+    setTeam(teamRef.current);
+    setPosition(positionRef.current);
+    setNotes(notesRef.current);
+    const updateObj = {
+      _id: row.original.id,
+      name: nameRef.current,
+      team: teamRef.current,
+      position: positionRef.current,
+      notes: notesRef.current,
     }
+    setVisible(false);
+    saveEditRow(updateObj);
+  }
 
-    function getRowName() {
-      return `Editing ${row.original.name}`;
-    }
+  function getRowName() {
+    return `Editing: ${nameRef.current}`;
+  }
+  
+  function updateName(val) {
+    nameRef.current = val;
+  }
+  
+  function updateTeam(val) {
+    teamRef.current = val;
+  }
 
-    return (
-        <div className="card flex justify-content-center">
-            <Button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)} />
-            <Dialog header={getRowName} visible={visible} style={dialogStyleObj} onHide={() => setVisible(false)}>
-              <div className="card flex justify-content-center">
-                <InputText value={row.original.name} onChange={(e) => setValue(e.target.value, 'name')} />
-                <p className="m-0">
-                    {row.original.notes}
-                </p>
-              </div>
-            </Dialog>
-        </div>
-    )
+  function updatePosition(val) {
+    positionRef.current = val;
+  }
+  
+  function updateNotes(val) {
+    notesRef.current = val;
+  }
+
+  return (
+    <div className="card flex justify-center">
+        <Button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)} />
+        <Dialog header={getRowName} visible={visible} style={dialogStyleObj} onHide={() => savePlayer()}>
+          <br />
+          <label htmlFor="name">Name</label>
+          <br />
+          <InputText className="m-0 p-inputtext-lg" defaultValue={playerName} onChange={(e) => updateName(e.target.value, 'name')} />
+          <br />
+          <br />
+          <label htmlFor="team">Team</label>
+          <br />
+          <InputText className="m-0 p-inputtext-lg" defaultValue={playerTeam} onChange={(e) => updateTeam(e.target.value, 'team')} />
+          <br />
+          <br />
+          <label htmlFor="position">Position</label>
+          <br />
+          <InputText className="m-0 p-inputtext-lg" defaultValue={playerPosition} onChange={(e) => updatePosition(e.target.value, 'position')} />
+          <br />
+          <br />
+          <label htmlFor="notes">Notes</label>
+          <br />
+          <InputText className="m-0 p-inputtext-lg" defaultValue={playerNotes} onChange={(e) => updateNotes(e.target.value, 'notes')} />
+        </Dialog>
+    </div>
+  )
 }
