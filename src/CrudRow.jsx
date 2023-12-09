@@ -28,6 +28,10 @@ export function CrudRow({row, saveEditRow }) {
   const teamRef = useRef(row.original.team);
   const positionRef = useRef(row.original.position);
   const notesRef = useRef(row.original.notes);
+
+  function closePlayer() {
+    setVisible(false);
+  }
     
   function savePlayer() {
     setName(nameRef.current);
@@ -67,8 +71,8 @@ export function CrudRow({row, saveEditRow }) {
 
   return (
     <div className="card flex justify-center">
-        <Button label="Show" icon="pi pi-external-link" onClick={() => setVisible(true)} />
-        <Dialog header={getRowName} visible={visible} style={dialogStyleObj} onHide={() => savePlayer()}>
+        <Button label="✎" icon="pi pi-external-link" onClick={() => setVisible(true)} />
+        <Dialog header={getRowName} visible={visible} style={dialogStyleObj} onHide={() => closePlayer()}>
           <br />
           <label htmlFor="name">Name</label>
           <br />
@@ -88,6 +92,10 @@ export function CrudRow({row, saveEditRow }) {
           <label htmlFor="notes">Notes</label>
           <br />
           <InputText className="m-0 p-inputtext-lg" defaultValue={playerNotes} onChange={(e) => updateNotes(e.target.value, 'notes')} />
+          <br />
+          <br />
+          <Button label="Cancel" icon="pi pi-external-link" onClick={() => closePlayer()} />
+          <Button label="Save" icon="pi pi-external-link" onClick={() => savePlayer()} />
         </Dialog>
     </div>
   )
