@@ -109,7 +109,7 @@ function EditPlayerRank() {
   );
 
   const [value, setValue] = React.useState('');
-  const [isAuthenticated, setAuthenticated] = React.useState(true);
+  const [isAuthenticated, setAuthenticated] = React.useState(false);
   const [isLoading, setLoading] = React.useState(true);
   const [data, setData] = React.useState(null);
 
