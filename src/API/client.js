@@ -7,7 +7,7 @@ export async function getPlayerData() {
     let request = await fetch(`${BASE_URL}/get_players`, {
       method: 'GET',
       headers: {
-        "Content-Type": 'Application/json',
+        "Content-Type": 'application/json',
         "Access-Control-Allow-Origin": "*",
         "Authorization": `Bearer ${ENV === 'development' ? process.env.REACT_APP_API_DEV_TOKEN
           : process.env.REACT_APP_API_TOKEN}`,
@@ -28,7 +28,7 @@ export async function updatePlayerData(data) {
   let request = await fetch(`${BASE_URL}/update_players`, {
     method: 'POST',
     headers: {
-      "Content-Type": 'Application/json',
+      "Content-Type": 'application/json',
       "Access-Control-Allow-Origin": "*",
       "Authorization": `Bearer ${ENV === 'development' ? process.env.REACT_APP_API_DEV_TOKEN
           : process.env.REACT_APP_API_TOKEN}`,
@@ -42,11 +42,30 @@ export async function updatePlayerData(data) {
   return response;
 }
 
+export async function updatePlayer(player_obj) {
+  let request = await fetch(`${BASE_URL}/update_player`, {
+    method: 'PUT',
+    headers: {
+      "Content-Type": 'application/json',
+      "Access-Control-Allow-Origin": "*",
+      "Authorization": `Bearer ${ENV === 'development' ? process.env.REACT_APP_API_DEV_TOKEN
+      : process.env.REACT_APP_API_TOKEN}`,
+    },
+    body: JSON.stringify(player_obj)
+  })
+  console.log(request);
+  if (request.status !== 200) {
+    throw new Error(`Error updating player note with ID: ${player_obj._id}`);
+  }
+  const response = await request.json();
+  return response;
+}
+
 export async function updatePlayerNote(_id, note) {
   let request = await fetch(`${BASE_URL}/update_player_note`, {
     method: 'PUT',
     headers: {
-      "Content-Type": 'Application/json',
+      "Content-Type": 'application/json',
       "Access-Control-Allow-Origin": "*",
       "Authorization": `Bearer ${ENV === 'development' ? process.env.REACT_APP_API_DEV_TOKEN
       : process.env.REACT_APP_API_TOKEN}`,

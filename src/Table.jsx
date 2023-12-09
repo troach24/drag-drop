@@ -8,6 +8,7 @@ import {
 } from "@dnd-kit/sortable";
 import { useTable } from "react-table";
 import { NonDraggableTableRow } from "./NonDraggableTableRow";
+import styled from "styled-components";
 
 export function Table({ columns, data }) {
   const items = useMemo(() => data?.map(({ id }) => id), [data]);
@@ -23,6 +24,15 @@ export function Table({ columns, data }) {
     data
   });
 
+  const HeaderStyle = styled.th`
+    &:nth-of-type(2) {
+      text-align: left;
+    }
+    &:nth-of-type(3) {
+      text-align: left;
+    }
+  `
+
   // Render the UI for your table
   return (
     <DndContext>
@@ -31,7 +41,7 @@ export function Table({ columns, data }) {
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+                <HeaderStyle {...column.getHeaderProps()}>{column.render("Header")}</HeaderStyle>
               ))}
             </tr>
           ))}
